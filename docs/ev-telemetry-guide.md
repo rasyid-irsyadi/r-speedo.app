@@ -1,16 +1,18 @@
 # EV telemetry guide
 
-Last verified: 2026-07-01
+Last verified: 2026-07-19
 
-R-Speedo combines data from a phone, motor controller, and battery management system when those sources are available. The values describe different parts of the vehicle and should not be treated as interchangeable.
+R-Speedo combines data from a phone, motor controller, vehicle module, battery management system, TPMS sensor, and user configuration when those sources are available. The values describe different parts of the vehicle and should not be treated as interchangeable.
 
 ## Controller and BMS roles
 
 | Source | Typical responsibility | Example telemetry |
 | --- | --- | --- |
-| Phone GPS | Position and motion estimate | Speed, route, distance, elevation |
-| Motor controller | Motor power delivery and controller state | Electrical speed, phase/battery current, voltage, temperature, faults |
+| Phone GPS | Position and motion estimate | Speed, route, distance, elevation, heading |
+| Motor controller | Motor power delivery and controller state | Electrical speed, current, voltage, temperature, gear/status, faults |
+| Vehicle module | Vehicle-specific telemetry bridge | Speed, SOC, odometer, temperatures, voltage/current/capacity, errors |
 | BMS | Battery-pack monitoring and protection | Pack voltage/current, state of charge, cell voltages, temperatures, alarms |
+| TPMS | Tire pressure monitoring | Pressure, temperature, battery/freshness, warnings |
 
 A field appearing in an app does not prove that every connected device measures it directly. Some values may be estimated, derived, unavailable, or reported with device-specific units and conventions.
 
@@ -18,7 +20,7 @@ A field appearing in an app does not prove that every connected device measures 
 
 ### Speed
 
-Speed may come from GPS or controller telemetry. GPS speed depends on reception, sampling, filtering, and device movement. Controller speed depends on wheel, motor, gearing, pole-pair, and firmware configuration. Compare it with a trusted reference and keep calibration adjustable.
+Speed may come from GPS, controller telemetry, or a vehicle module. GPS speed depends on reception, sampling, filtering, and device movement. Controller speed depends on wheel, motor, gearing, pole-pair, and firmware configuration. Compare it with a trusted reference and keep calibration adjustable.
 
 ### Voltage
 
@@ -30,15 +32,15 @@ Current sign and meaning are device-specific. A positive value may mean discharg
 
 ### State of charge
 
-State of charge is an estimate produced by the BMS or R-Speedo configuration. Accuracy depends on usable capacity, calibration, current measurement, battery chemistry, balancing, temperature, and whether the BMS has recently reached a known full or empty reference.
+State of charge is an estimate produced by the BMS, vehicle module, or R-Speedo configuration. Accuracy depends on usable capacity, calibration, current measurement, battery chemistry, balancing, temperature, and whether the BMS has recently reached a known full or empty reference.
 
 ### Range
 
 Range is an estimate, not a promise. It changes with recent energy use, speed, terrain, wind, load, temperature, tire pressure, battery condition, and configured capacity.
 
-### Temperature and faults
+### Temperature, cell delta, and faults
 
-Temperature fields may refer to different sensors. Fault codes and thresholds are controller- or BMS-specific. Use the hardware manufacturer's documentation for service decisions.
+Temperature fields may refer to different sensors. Cell delta and temperature warnings matter for battery safety, but thresholds and meaning still depend on pack design. Fault codes and protection limits are controller- or BMS-specific. Use the hardware manufacturer's documentation for service decisions.
 
 ## GPS-only mode
 
@@ -47,9 +49,10 @@ GPS-only mode is useful when no compatible Bluetooth device is available. It can
 - Speed and route display.
 - Distance and trip timing.
 - Basic trip reports.
+- Layout 8 Dragger attempts with GPS quality gates.
 - Navigation and map features when network data is available.
 
-It cannot reconstruct cell voltages, controller current, internal temperatures, or hardware fault states that were never transmitted to the phone.
+It cannot reconstruct cell voltages, controller current, internal temperatures, tire pressure, or hardware fault states that were never transmitted to the phone.
 
 The [W3C Geolocation specification](https://www.w3.org/TR/geolocation/) defines the browser geolocation interface but does not guarantee a particular sensor, sampling rate, or accuracy for every device.
 
@@ -62,6 +65,14 @@ The [W3C Geolocation specification](https://www.w3.org/TR/geolocation/) defines 
 - Mobile operating systems can suspend background work to save power.
 
 The [Web Bluetooth specification](https://webbluetoothcg.github.io/web-bluetooth/) describes the browser API. Actual availability still depends on the browser and operating system.
+
+## Multi-battery reality
+
+Multiple packs need more than a combined number on screen. Capacity, voltage range, active/connected state, BMS availability, current direction, and pack visibility affect whether an aggregate is useful. R-Speedo keeps per-pack views and can refuse unsafe aggregation when the inputs are incomplete.
+
+## Dragger timing limits
+
+Layout 8 Dragger uses GPS samples, quality gates, server recomputation, and public evidence to make runs comparable. It still depends on phone GNSS quality, sample intervals, start reconstruction, route shape, elevation, and filtering. Treat it as a practical rider comparison tool, not official timing equipment.
 
 ## Calibration and verification
 
