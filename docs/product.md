@@ -1,6 +1,6 @@
 # R-Speedo product overview
 
-Last verified: 2026-07-19
+Last verified: 2026-08-15
 
 R-Speedo is a phone-based EV dashboard for riders who want one interface for speed, battery, controller, route, charging, performance, motovlog, and trip information. It can run with GPS only or combine GPS with telemetry from supported Bluetooth hardware.
 
@@ -10,7 +10,7 @@ R-Speedo is a phone-based EV dashboard for riders who want one interface for spe
 - EV builders and tuners who need live controller/BMS telemetry and diagnostics.
 - Riders with multiple battery packs who need per-pack and guarded aggregate views.
 - Android users who want native Bluetooth behavior, background recording, offline licensing, start-on-boot, private APK releases, and a home-screen telemetry widget.
-- Riders who want Layout 7 motovlog recording or Layout 8 GPS-based Dragger timing.
+- Riders who want Layout 7 motovlog recording, Layout 8 GPS-based Dragger timing, Layout 9 road Dyno analysis, or a custom Layout 10 Canvas.
 
 ## Operating modes
 
@@ -28,17 +28,23 @@ Users can configure multiple battery packs and pair a BMS per pack. R-Speedo can
 
 ## Main capabilities
 
-- Eight dashboard layouts, including Tech Lab sensors, map/navigation, motovlog, and Dragger.
+- Ten dashboard layouts, including Tech Lab sensors, map/navigation, motovlog, Dragger, road Dyno, and a custom Canvas.
 - Speed, trip, odometer, battery, controller, tire pressure, and fault monitoring when data is available.
 - Route search, destination links, distance, ETA, charging-station and workshop context, and optional live-rider sharing.
 - Charge session panel with ETA, energy, cost, voltage, temperature, and cell-delta warnings.
 - Trip history, maps, charts, stop/charging/fault logs, data quality indicators, and exports.
 - Layout 7 motovlog camera preview, recording controls, snapshots, gallery, and telemetry sidecar.
 - Layout 8 Dragger GPS timing with readiness gate, split times, personal best, ghost/rival, leaderboard, public evidence, and report flow.
+- Layout 9 local road Dyno with readiness/cooldown, paired two-way pulls, energy and voltage-sag analysis, minimum wheel-power/torque estimates when data is sufficient, and baseline/candidate comparison. It is not a chassis dynamometer.
+- Layout 10 custom Canvas with up to five portrait or landscape canvases, configurable telemetry/media/map/camera/image/text/icon widgets, local backgrounds, and optional JSON import/export.
+- An Indonesia-only hardware Shop with product availability, IDR pricing shown by the current app data, and WhatsApp handoff.
+- Read-only VESC controller and JBD BMS telemetry, plus time synchronization and Layout 6 navigation mirroring for supported Alva Cervo BL-CERVO head units.
 - Optional privacy-aware EV analytics for aggregate product and market-fit signals.
 - Vehicle profiles, including multiple saved motorcycles and manufacturer profiles from the app data.
 
 Feature availability can differ between Web/PWA and Android APK installations.
+
+Layout 7 and Layout 8 assets may require an authenticated R-Speedo session.
 
 ## Web/PWA and Android APK
 
@@ -60,6 +66,8 @@ Safari on iPhone/iPad can be used for normal web features such as GPS-only dashb
 
 Bluefy or another WebBLE browser may work as a user-tested workaround for Bluetooth telemetry on iPhone. Treat this as experimental and more complicated than Android native Bluetooth.
 
+R-Speedo also has a native iOS test/sideload target, but it is not a public release channel. Android remains the publicly distributed premium native app.
+
 ## Data and privacy
 
 - Local dashboard and trip/report data are separate from anonymous analytics.
@@ -79,6 +87,8 @@ Users should review the current in-app consent text before enabling analytics or
 - Battery state of charge and range estimates depend on correct vehicle configuration and source telemetry.
 - Charging-station and workshop information may be incomplete or outdated.
 - Layout 8 Dragger is a GPS/performance mode, not official timing equipment.
+- Layout 9 road Dyno is affected by GNSS quality, road, wind, slope, mass/configuration, sampling, and source telemetry; its estimates are not chassis-dyno measurements.
+- The hardware Shop is available only for Indonesia and its current product status remains authoritative in the app.
 - The Polytron integration is unofficial, requires an external ESP32 Votol CAN module, and is monitoring-only for controller settings.
 
 See [compatibility](compatibility.md), [reports and data](reports-and-data.md), [privacy](privacy.md), [frequently asked questions](faq.md), and the [EV telemetry guide](ev-telemetry-guide.md) for details.
