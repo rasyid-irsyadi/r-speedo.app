@@ -1,6 +1,6 @@
 # R-Speedo frequently asked questions
 
-Last verified: 2026-07-19
+Last verified: 2026-08-15
 
 ## What is R-Speedo?
 
@@ -16,7 +16,7 @@ Some dashboard and locally stored trip features can continue without a live conn
 
 ## Which controllers and BMS devices are supported?
 
-R-Speedo includes integrations for Votol and Fardriver controllers, Gesits read-only telemetry, the independent Polytron ESP32 Votol CAN module path, JK BMS, Daly BMS, ANT BMS, and supported BLE TPMS formats. Exact compatibility depends on model, firmware, protocol, adapter, browser, and operating system. See [compatibility](compatibility.md).
+R-Speedo includes integrations for Votol and Fardriver controllers, read-only VESC controller telemetry, Gesits read-only telemetry, the independent Polytron ESP32 Votol CAN module path, JK/Daly/ANT/JBD BMS devices, supported BLE TPMS formats, and Cervo clock/navigation mirroring. Exact compatibility depends on model, firmware, protocol, adapter, browser, and operating system. See [compatibility](compatibility.md).
 
 ## Does it work with Polytron motorcycles?
 
@@ -28,11 +28,27 @@ The PWA runs from a browser and can be installed where browser support allows. B
 
 ## Does R-Speedo work on iPhone or iPad?
 
-Safari can be used for GPS-only web features where location support is available, but Safari does not provide native Web Bluetooth telemetry. Bluefy or another WebBLE browser may work as an experimental user-tested workaround. There is no iPhone APK.
+Safari can be used for GPS-only web features where location support is available, but Safari does not provide native Web Bluetooth telemetry. Bluefy or another WebBLE browser may work as an experimental user-tested workaround. A native iOS test/sideload target exists, but there is no public native iOS release.
 
 ## What is Layout 8 Dragger?
 
 Layout 8 Dragger is a GPS-based performance mode. It measures split times, compares against personal best or a rival ghost, syncs eligible runs to a leaderboard, and exposes public evidence without raw coordinates. It is not official race timing equipment. See [reports and data](reports-and-data.md).
+
+## What is Layout 9 road Dyno?
+
+Layout 9 compares paired local road pulls and can analyze time, energy, voltage sag, temperature, and minimum wheel-power/torque estimates when enough data is available. Readiness, cooldown, road, wind, slope, vehicle configuration, GNSS, and telemetry quality affect the result. It is not a chassis dynamometer.
+
+## What is Layout 10 custom Canvas?
+
+Layout 10 lets users arrange telemetry, media, map, camera, image, text, and icon widgets on up to five local portrait or landscape canvases. Canvas configuration can be exported or imported as JSON; locally selected image assets remain local unless the user exports or shares them.
+
+## What does Cervo support do?
+
+For a supported Alva Cervo BL-CERVO head unit, R-Speedo can synchronize time and mirror Layout 6 navigation. This integration does not edit the vehicle controller.
+
+## Where is the hardware Shop available?
+
+The R-Speedo hardware Shop is available only in Indonesia. Current products, availability, IDR prices, and the WhatsApp handoff are shown by the app, so copied listings may become outdated.
 
 ## What is the Android telemetry widget?
 
