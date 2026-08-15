@@ -1,6 +1,6 @@
 # R-Speedo privacy notes
 
-Last verified: 2026-07-19
+Last verified: 2026-08-15
 
 This public repository documents R-Speedo. It does not contain application source code, private backend configuration, account data, payment data, credentials, license tokens, raw user trips, or private endpoints.
 
@@ -10,7 +10,7 @@ Screenshots and video in this repository, when present, must use synthetic demo 
 
 ## Local data and app data
 
-R-Speedo uses local storage or native app storage for settings, profiles, trip/ODO state, BLE pairing preferences, TPMS state, report data, layout settings, charge session state, Dragger runs/queue, and Android widget snapshots.
+R-Speedo uses local storage or native app storage for settings, profiles, trip/ODO state, BLE pairing preferences, TPMS state, report data, layout settings, charge session state, Dragger runs/queue, road Dyno runs/baselines, custom Canvas configurations and selected local image assets, and Android widget snapshots.
 
 Local ride/report data is different from anonymous analytics. A trip can exist locally without being part of analytics export.
 

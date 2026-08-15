@@ -1,6 +1,6 @@
 # EV telemetry guide
 
-Last verified: 2026-07-19
+Last verified: 2026-08-15
 
 R-Speedo combines data from a phone, motor controller, vehicle module, battery management system, TPMS sensor, and user configuration when those sources are available. The values describe different parts of the vehicle and should not be treated as interchangeable.
 
@@ -29,6 +29,8 @@ Controller and BMS voltage readings can differ because they may be sampled at di
 ### Current and power
 
 Current sign and meaning are device-specific. A positive value may mean discharge on one device and charging or regeneration on another. Approximate electrical power is commonly derived from voltage multiplied by current, but it is not the same as mechanical wheel power.
+
+Layout 9 road Dyno may estimate a minimum wheel-power and torque value when sufficient motion, vehicle, and telemetry data is available. That estimate is affected by vehicle mass/configuration, road, slope, wind, GNSS quality, sampling, filtering, and source telemetry. Neither electrical power nor the road estimate is a chassis-dyno measurement.
 
 ### State of charge
 
@@ -73,6 +75,10 @@ Multiple packs need more than a combined number on screen. Capacity, voltage ran
 ## Dragger timing limits
 
 Layout 8 Dragger uses GPS samples, quality gates, server recomputation, and public evidence to make runs comparable. It still depends on phone GNSS quality, sample intervals, start reconstruction, route shape, elevation, and filtering. Treat it as a practical rider comparison tool, not official timing equipment.
+
+## Road Dyno limits
+
+Layout 9 should be used only where a road pull can be performed legally and safely. Readiness and cooldown checks improve repeatability but cannot remove traffic, surface, weather, mounting, sensor, or telemetry variation. Compare paired runs under similar conditions and treat the output as setup guidance rather than a laboratory certificate.
 
 ## Calibration and verification
 

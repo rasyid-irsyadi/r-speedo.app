@@ -1,6 +1,6 @@
 # R-Speedo reports and data
 
-Last verified: 2026-07-19
+Last verified: 2026-08-15
 
 R-Speedo reports turn ride telemetry into local evidence that can help riders understand range, energy use, charging, setup quality, and hardware behavior. Reports are not lab-grade measurement and are not a sales forecast.
 
@@ -31,6 +31,12 @@ Charge session views can show SOC, ETA, energy added, Ah/kWh, estimated cost, vo
 Layout 8 Dragger can produce GPS-based split timing for 60ft, 100m, 201m, 301m, 402m, and 0-60/100/120 km/h. Eligible runs are recomputed server-side for leaderboard submission. Public evidence can include quality indicators, start model, GPS rate/accuracy, power/class evidence, two-way badge, and coordinate-free public traces.
 
 Raw coordinates are not part of the public evidence view. They are retained only for limited moderation needs and can be removed by retention logic.
+
+## Road Dyno data
+
+Layout 9 road Dyno keeps its pull analysis local. It can compare paired two-way pulls and show readiness/cooldown state, time, energy, voltage sag, temperature, and minimum wheel-power/torque estimates when the required data is available. Baseline and candidate comparisons can help evaluate setup changes.
+
+These results depend on road, wind, slope, vehicle mass/configuration, GNSS, sampling, and source telemetry. They are practical road estimates, not laboratory or chassis-dyno measurements, and they do not change controller settings.
 
 ## Export formats
 
