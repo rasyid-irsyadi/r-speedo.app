@@ -77,5 +77,3 @@ If a device is not listed, [open an issue](https://github.com/rasyid-irsyadi/r-s
 - Bluetooth device name.
 - Whether the test used Web/PWA, Android APK, or an iPhone WebBLE workaround.
 - A description of the connection result without personal data or credentials.
-
-Do not post license tokens, account details, raw location history, credentials, or other sensitive data.

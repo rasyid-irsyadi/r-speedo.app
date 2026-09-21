@@ -43,8 +43,6 @@ The public repository includes the media currently supplied for R-Speedo documen
 
 ### Videos
 
-- [Facebook reel 1](media/r-speedo-facebook-reel-1.mp4)
-- [Facebook reel 2](media/r-speedo-facebook-reel-2.mp4)
 - [Facebook reel 1070770375360770](media/r-speedo-reel-1070770375360770.mp4)
 - [Video download duplicate](<media/video-a9d4f339-9697-4925-88a0-8906b99ddc38-1789191330%20(1).mp4>)
 
