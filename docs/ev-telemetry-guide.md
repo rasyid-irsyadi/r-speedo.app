@@ -1,6 +1,6 @@
 # EV telemetry guide
 
-Last verified: 2026-08-15
+Last verified: 2026-09-21
 
 R-Speedo combines data from a phone, motor controller, vehicle module, battery management system, TPMS sensor, and user configuration when those sources are available. The values describe different parts of the vehicle and should not be treated as interchangeable.
 
@@ -29,6 +29,10 @@ Controller and BMS voltage readings can differ because they may be sampled at di
 ### Current and power
 
 Current sign and meaning are device-specific. A positive value may mean discharge on one device and charging or regeneration on another. Approximate electrical power is commonly derived from voltage multiplied by current, but it is not the same as mechanical wheel power.
+
+### Controller tuning
+
+R-Speedo is not one generic controller editor. Votol exposes settings pages and Fardriver exposes confirmed writable fields with safety guards. VESC, Gesits, Polytron, and SFOX350 integrations remain read-only or diagnostic where stated. A tuning comparison should record the protocol, profile, settings snapshot, battery configuration, and test conditions before drawing a conclusion.
 
 Layout 9 road Dyno may estimate a minimum wheel-power and torque value when sufficient motion, vehicle, and telemetry data is available. That estimate is affected by vehicle mass/configuration, road, slope, wind, GNSS quality, sampling, filtering, and source telemetry. Neither electrical power nor the road estimate is a chassis-dyno measurement.
 

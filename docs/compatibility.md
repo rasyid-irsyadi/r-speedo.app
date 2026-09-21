@@ -1,18 +1,19 @@
 # R-Speedo compatibility
 
-Last verified: 2026-08-15
+Last verified: 2026-09-21
 
-This page describes integrations available in R-Speedo 1.0.47. "Integrated" means the application contains a maintained connection, parser, or UI path for that device family. It does not mean every model, firmware, clone, or third-party adapter has been physically verified.
+This page describes integrations available in R-Speedo 1.0.53. "Integrated" means the application contains a maintained connection, parser, or UI path for that device family. It does not mean every model, firmware, clone, or third-party adapter has been physically verified.
 
 ## Motor controllers and vehicle telemetry
 
 | Device or family | Type | Connection | Supported R-Speedo platforms | Status | Last verified | Known limitations |
 | --- | --- | --- | --- | --- | --- | --- |
-| Votol | Controller | Bluetooth | Web/PWA with Web Bluetooth; Android APK native Bluetooth | Integrated | 2026-07-19 | Compatibility and writable settings vary by controller, firmware, and adapter |
-| Fardriver | Controller | Bluetooth | Web/PWA with Web Bluetooth; Android APK native Bluetooth | Integrated | 2026-07-19 | Compatibility and available telemetry vary by controller, firmware, and adapter |
-| VESC | Controller | Nordic UART Bluetooth | Web/PWA with Web Bluetooth; Android APK native Bluetooth | Integrated, read-only telemetry | 2026-08-15 | Reads supported `COMM_GET_VALUES_SETUP`/`COMM_GET_VALUES` telemetry; it is not a VESC controller editor |
+| Votol | Controller | Bluetooth | Web/PWA with Web Bluetooth; Android APK native Bluetooth | Integrated; tuning fields where supported | 2026-09-21 | Settings layout, writable fields, safety limits, firmware, and adapter vary by controller |
+| Fardriver | Controller | Bluetooth | Web/PWA with Web Bluetooth; Android APK native Bluetooth | Integrated; confirmed tuning fields where supported | 2026-09-21 | Writes are limited to confirmed fields and guarded against stale telemetry or a running motor |
+| VESC | Controller | Nordic UART Bluetooth | Web/PWA with Web Bluetooth; Android APK native Bluetooth | Integrated, read-only telemetry | 2026-09-21 | Reads supported `COMM_GET_VALUES_SETUP`/`COMM_GET_VALUES` telemetry; it is not a VESC controller editor |
 | Gesits | Vehicle telemetry | Bluetooth | Web/PWA with Web Bluetooth; Android APK native Bluetooth | Integrated | 2026-07-19 | Read-only telemetry; available fields depend on the vehicle/device |
-| Polytron profile with external ESP32 Votol CAN module | Vehicle telemetry module | BLE JSON advertised as `Votol_BLE` | Web/PWA with Web Bluetooth; Android APK native Bluetooth | Experimental, unofficial | 2026-07-19 | Requires a separate unofficial module; controller-setting writes are unavailable |
+| Polytron profile with external ESP32 Votol CAN module | Vehicle telemetry module | BLE JSON advertised as `Votol_BLE` | Web/PWA with Web Bluetooth; Android APK native Bluetooth | Experimental, unofficial | 2026-09-21 | Requires a separate unofficial module; controller-setting writes are unavailable |
+| SFOX350 on supported Polytron setups | Vehicle telemetry module | BLE with module authentication | Web/PWA with Web Bluetooth; Android APK native Bluetooth | Experimental, unofficial | 2026-09-21 | Requires the SFOX350 module and matching setup; provides telemetry/diagnostics, not generic controller tuning |
 
 ## Battery management systems
 
@@ -21,7 +22,7 @@ This page describes integrations available in R-Speedo 1.0.47. "Integrated" mean
 | JK BMS | BMS | Bluetooth | Web/PWA with Web Bluetooth; Android APK native Bluetooth | Integrated | 2026-07-19 | Model, protocol, and firmware variants may expose different fields |
 | Daly BMS | BMS | Bluetooth | Web/PWA with Web Bluetooth; Android APK native Bluetooth | Integrated | 2026-07-19 | Model, protocol, and firmware variants may expose different fields |
 | ANT BMS | BMS | Bluetooth | Web/PWA with Web Bluetooth; Android APK native Bluetooth | Integrated | 2026-07-19 | Model, protocol, and firmware variants may expose different fields |
-| JBD BMS | BMS | Bluetooth | Web/PWA with Web Bluetooth; Android APK native Bluetooth | Integrated, read-only telemetry | 2026-08-15 | Model, protocol, and firmware variants may expose different fields |
+| JBD BMS | BMS | Bluetooth | Web/PWA with Web Bluetooth; Android APK native Bluetooth | Integrated, read-only telemetry | 2026-09-21 | Model, protocol, and firmware variants may expose different fields |
 
 ## Additional sensors
 
@@ -33,7 +34,7 @@ This page describes integrations available in R-Speedo 1.0.47. "Integrated" mean
 
 | Device or family | Type | Connection | Supported R-Speedo platforms | Status | Last verified | Known limitations |
 | --- | --- | --- | --- | --- | --- | --- |
-| Alva Cervo BL-CERVO | Head unit/navigation accessory | Bluetooth | R-Speedo platforms with compatible Bluetooth access | Integrated | 2026-08-15 | Synchronizes time and mirrors Layout 6 navigation; it is not controller telemetry or a controller editor |
+| Alva Cervo BL-CERVO | Head unit/navigation accessory | Bluetooth | R-Speedo platforms with compatible Bluetooth access | Integrated | 2026-09-21 | Synchronizes time and mirrors Layout 6 navigation; it is not controller telemetry or a controller editor |
 
 ## Multi-battery
 

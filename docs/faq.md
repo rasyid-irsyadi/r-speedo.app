@@ -1,6 +1,6 @@
 # R-Speedo frequently asked questions
 
-Last verified: 2026-08-15
+Last verified: 2026-09-21
 
 ## What is R-Speedo?
 
@@ -21,6 +21,14 @@ R-Speedo includes integrations for Votol and Fardriver controllers, read-only VE
 ## Does it work with Polytron motorcycles?
 
 There is an experimental Polytron profile for an external ESP32 Votol CAN module that sends BLE JSON as `Votol_BLE`. It is independent of Polytron, and writing controller settings is unavailable.
+
+## Can R-Speedo tune a controller?
+
+For supported protocols, yes. Votol exposes controller setting pages and Fardriver exposes confirmed writable fields with safety warnings and guards. VESC, Gesits, Polytron, and SFOX350 paths remain read-only or diagnostic where stated. It is not a universal editor for every controller.
+
+## What does multi-battery support mean?
+
+You can pair a BMS per pack, keep pack visibility, see connected/estimated/active state, and use guarded aggregate telemetry. R-Speedo can degrade or refuse an aggregate when pack data is incomplete or unsafe to combine; it does not claim every pack combination is safe.
 
 ## What is the difference between the PWA and Android APK?
 

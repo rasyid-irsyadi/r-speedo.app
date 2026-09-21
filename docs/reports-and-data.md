@@ -1,6 +1,6 @@
 # R-Speedo reports and data
 
-Last verified: 2026-08-15
+Last verified: 2026-09-21
 
 R-Speedo reports turn ride telemetry into local evidence that can help riders understand range, energy use, charging, setup quality, and hardware behavior. Reports are not lab-grade measurement and are not a sales forecast.
 
@@ -21,6 +21,12 @@ Charts may include speed, GPS speed, RPM, voltage, current, SOC, cell delta, tem
 ## Multi-battery reporting
 
 Multi-battery reports can show pack summaries, connected/estimated/active state, pack visibility, current per pack when available, warnings, and aggregate values. Aggregates can be rejected or degraded when pack data is incomplete or unsafe to combine.
+
+## Controller tuning evidence
+
+Controller tuning is protocol-specific. Reports and road Dyno comparisons can preserve the selected vehicle profile and available controller-setting snapshot so a rider can relate a measured result to a setup change. This is context for comparison, not proof that every field was writable or that the change alone caused the result.
+
+Votol and confirmed Fardriver fields may be writable through the Controller panel. VESC, Gesits, Polytron, and SFOX350 paths remain read-only or diagnostic where stated. Layout 9 never writes controller settings.
 
 ## Charge sessions
 
@@ -51,4 +57,4 @@ Exports come from local trip/report data and do not require analytics opt-in.
 
 ## Privacy boundary
 
-Local reports, anonymous analytics, live-rider sharing, and public demo media are separate concepts. Public repository media must use synthetic data and public locations. Anonymous analytics exports are aggregate signals, not raw user reports.
+Local reports, anonymous analytics, live-rider sharing, and public demo media are separate concepts. Public repository media must use synthetic or intentionally public demo data and public locations. Anonymous analytics exports are aggregate signals, not raw user reports.

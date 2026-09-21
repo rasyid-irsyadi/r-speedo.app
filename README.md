@@ -2,12 +2,13 @@
 
 R-Speedo is a PWA and Android dashboard that turns a phone into an EV instrument panel using GPS and optional Bluetooth telemetry from supported motor controllers and battery management systems.
 
-[Open R-Speedo](https://r-speedo.app/) · Last verified: 2026-08-15 · Current app version: 1.0.47
+[Open R-Speedo](https://r-speedo.app/) · Last verified: 2026-09-21 · Current app version: 1.0.53
 
 ## What R-Speedo does
 
 - Shows speed, battery, controller, trip, navigation, and charging-session information across ten dashboard layouts.
 - Reads supported Votol, Fardriver, and VESC controller telemetry, plus Gesits and an experimental unofficial Polytron module path.
+- Supports protocol-specific controller tuning: Votol settings and confirmed writable Fardriver fields include safety guards; VESC, Gesits, and Polytron module paths remain read-only where stated.
 - Reads supported JK, Daly, ANT, and JBD battery management systems over Bluetooth.
 - Can synchronize time and mirror Layout 6 navigation to a supported Alva Cervo BL-CERVO head unit.
 - Supports BLE TPMS sensors for front/rear pressure, temperature, battery/freshness, and warnings when available.
@@ -16,12 +17,19 @@ R-Speedo is a PWA and Android dashboard that turns a phone into an EV instrument
 - Supports multiple configured battery packs with per-pack visibility and guarded aggregate telemetry.
 - Includes Layout 7 for motovlog recording/snapshots and Layout 8 Dragger for GPS-based performance timing, evidence, ghost/rival runs, and leaderboards.
 - Includes Layout 9 road Dyno for local paired-pull analysis and Layout 10 Canvas for custom telemetry dashboards.
+- Turns controller/BMS telemetry into a tuning loop with calibration, per-pack visibility, trip evidence, road Dyno comparison, and reports; it does not pretend every controller has a generic editor.
 - Provides an Indonesia-only hardware Shop with product details and WhatsApp handoff.
+- Includes opt-in Hall of Fame boards, rider identity sync, and account-aware public performance history.
 - Runs as a web/PWA app and as an Android APK with native Bluetooth, background recording, file handling, offline licensing, start-on-boot, and a home-screen telemetry widget.
 
 ## Screenshots and demo
 
-Public screenshots and video are planned but are not published yet. When added, they will use synthetic demo data and safe public locations.
+Public demo media uses selected R-Speedo assets and public-facing videos. Screenshots are selected to avoid account, home/work, payment, and admin data.
+
+- [Dashboard demo](media/hero-dashboard.png)
+- [Trip report demo](media/report-demo.png)
+- [Controller/BMS tuning demo](media/controller-tuning-demo.mp4)
+- [Telemetry demo](media/telemetry-demo.mp4)
 
 ## Supported integrations
 
@@ -32,6 +40,7 @@ Public screenshots and video are planned but are not published yet. When added, 
 | Motor controller | VESC | Integrated, read-only telemetry |
 | Vehicle telemetry | Gesits | Integrated, read-only telemetry |
 | Vehicle profile | Polytron with an external ESP32 Votol CAN module | Experimental and unofficial |
+| Vehicle telemetry module | SFOX350 for supported Polytron setups | Experimental and unofficial |
 | Head unit | Alva Cervo BL-CERVO | Time synchronization and navigation mirroring |
 | BMS | JK | Integrated |
 | BMS | Daly | Integrated |
@@ -53,6 +62,7 @@ An integrated brand or protocol is not a guarantee that every model, firmware ve
 - Mobile operating systems may suspend browser activity in the background; the Android APK provides additional native background support.
 - Charging-station and workshop community data can be incomplete or outdated.
 - Polytron integration requires an external unofficial module and does not support writing controller settings.
+- Controller tuning is protocol-specific. Votol and confirmed Fardriver fields can expose settings writes with safety warnings; VESC, Gesits, Polytron, and SFOX350 telemetry paths do not become generic controller editors.
 - R-Speedo is a monitoring aid, not a replacement for manufacturer limits, calibrated instruments, or safe riding practices.
 
 ## Documentation
@@ -66,7 +76,7 @@ An integrated brand or protocol is not a guarantee that every model, firmware ve
 
 ## Ringkasan Bahasa Indonesia
 
-R-Speedo adalah dashboard PWA dan Android dengan sepuluh layout yang mengubah ponsel menjadi panel instrumen kendaraan listrik. Aplikasi dapat memakai GPS saja atau membaca telemetri Bluetooth dari controller Votol/Fardriver/VESC, kendaraan Gesits, BMS JK/Daly/ANT/JBD, TPMS BLE, dan modul Polytron ESP32 Votol CAN yang tidak resmi. R-Speedo juga memiliki peta/rute, sesi charging, report perjalanan, multi-battery, motovlog, Dragger, road Dyno, Canvas kustom, Shop hardware Indonesia, live rider, analytics anonim, APK premium, mirror navigasi Cervo, dan widget Android.
+R-Speedo adalah dashboard PWA dan Android dengan sepuluh layout yang mengubah ponsel menjadi panel instrumen kendaraan listrik. Aplikasi dapat memakai GPS saja atau membaca telemetri Bluetooth dari controller Votol/Fardriver/VESC, kendaraan Gesits, BMS JK/Daly/ANT/JBD, TPMS BLE, dan modul Polytron/SFOX350 yang tidak resmi. R-Speedo juga memiliki tuning controller berbasis protokol, multi-battery dengan view per pack, peta/rute, sesi charging, report perjalanan, motovlog, Dragger, road Dyno, Canvas kustom, Hall of Fame, Shop hardware Indonesia, live rider, analytics anonim, APK premium, mirror navigasi Cervo, dan widget Android.
 
 Dukungan perangkat tetap bergantung pada model, firmware, adapter, browser, sistem operasi, dan hasil verifikasi nyata. Harga dan metode pembayaran mengikuti flow resmi di aplikasi agar tidak basi.
 

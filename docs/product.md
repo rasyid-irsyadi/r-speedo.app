@@ -1,6 +1,6 @@
 # R-Speedo product overview
 
-Last verified: 2026-08-15
+Last verified: 2026-09-21
 
 R-Speedo is a phone-based EV dashboard for riders who want one interface for speed, battery, controller, route, charging, performance, motovlog, and trip information. It can run with GPS only or combine GPS with telemetry from supported Bluetooth hardware.
 
@@ -8,6 +8,7 @@ R-Speedo is a phone-based EV dashboard for riders who want one interface for spe
 
 - Riders who want a phone-based speedometer, range view, route panel, and trip report.
 - EV builders and tuners who need live controller/BMS telemetry and diagnostics.
+- Riders who want to tune supported controllers, compare setup changes, and keep a clear boundary between writable protocols and read-only telemetry.
 - Riders with multiple battery packs who need per-pack and guarded aggregate views.
 - Android users who want native Bluetooth behavior, background recording, offline licensing, start-on-boot, private APK releases, and a home-screen telemetry widget.
 - Riders who want Layout 7 motovlog recording, Layout 8 GPS-based Dragger timing, Layout 9 road Dyno analysis, or a custom Layout 10 Canvas.
@@ -21,6 +22,10 @@ GPS-only mode provides speed, route, distance, trip timing, basic reports, map v
 ### Bluetooth telemetry
 
 R-Speedo can pair with supported motor controllers, BMS devices, TPMS sensors, or a combination of them. Available fields depend on the connected device, firmware, adapter, permissions, signal quality, and selected profile.
+
+### Controller tuning
+
+The Controller panel is both a monitor and a tuning surface where the protocol supports safe writes. Votol exposes controller settings pages, while Fardriver exposes only confirmed writable fields with warnings and guards against stale telemetry or a running motor. VESC, Gesits, Polytron, and SFOX350 paths remain read-only or diagnostic where stated; Layout 9 can compare a controller-setting snapshot but never writes settings itself.
 
 ### Multiple battery packs
 
@@ -36,10 +41,12 @@ Users can configure multiple battery packs and pair a BMS per pack. R-Speedo can
 - Layout 7 motovlog camera preview, recording controls, snapshots, gallery, and telemetry sidecar.
 - Layout 8 Dragger GPS timing with readiness gate, split times, personal best, ghost/rival, leaderboard, public evidence, and report flow.
 - Layout 9 local road Dyno with readiness/cooldown, paired two-way pulls, energy and voltage-sag analysis, minimum wheel-power/torque estimates when data is sufficient, and baseline/candidate comparison. It is not a chassis dynamometer.
+- Controller tuning and calibration for supported protocols, with protocol-specific writable fields, safety warnings, speed/current/temperature context, and read-only boundaries for unsupported editors.
 - Layout 10 custom Canvas with up to five portrait or landscape canvases, configurable telemetry/media/map/camera/image/text/icon widgets, local backgrounds, and optional JSON import/export.
 - An Indonesia-only hardware Shop with product availability, IDR pricing shown by the current app data, and WhatsApp handoff.
 - Read-only VESC controller and JBD BMS telemetry, plus time synchronization and Layout 6 navigation mirroring for supported Alva Cervo BL-CERVO head units.
 - Optional privacy-aware EV analytics for aggregate product and market-fit signals.
+- Opt-in Hall of Fame boards and account-synced rider identity for public performance history.
 - Vehicle profiles, including multiple saved motorcycles and manufacturer profiles from the app data.
 
 Feature availability can differ between Web/PWA and Android APK installations.
@@ -89,6 +96,6 @@ Users should review the current in-app consent text before enabling analytics or
 - Layout 8 Dragger is a GPS/performance mode, not official timing equipment.
 - Layout 9 road Dyno is affected by GNSS quality, road, wind, slope, mass/configuration, sampling, and source telemetry; its estimates are not chassis-dyno measurements.
 - The hardware Shop is available only for Indonesia and its current product status remains authoritative in the app.
-- The Polytron integration is unofficial, requires an external ESP32 Votol CAN module, and is monitoring-only for controller settings.
+- The Polytron and SFOX350 integrations are unofficial, require external modules or matching setups, and are monitoring/diagnostic-only for controller settings.
 
 See [compatibility](compatibility.md), [reports and data](reports-and-data.md), [privacy](privacy.md), [frequently asked questions](faq.md), and the [EV telemetry guide](ev-telemetry-guide.md) for details.
