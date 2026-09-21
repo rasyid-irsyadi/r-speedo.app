@@ -61,10 +61,10 @@ The public repository includes the media currently supplied for R-Speedo documen
 All supplied media remains available in [`media/`](media/):
 
 - [Controller monitor](media/controller-monitor.png)
-- [Controller settings](media/controller-settings.png)
+- [Onboarding wizard](media/onboarding-wizard.png)
 - [Controller tuning](media/controller-tuning.png)
-- [Dragger leaderboard](media/dragger-leaderboard.png)
-- [GPS navigation](media/gps-navigation.png)
+- [Layout settings and calibration](media/layout-settings-calibration.png)
+- [Dashboard home](media/dashboard-home.png)
 - [Multi-battery pack 1](media/multi-battery-pack-1.png)
 - [Multi-battery pack 2](media/multi-battery-pack-2.png)
 - [Route map](media/route-map.png)
