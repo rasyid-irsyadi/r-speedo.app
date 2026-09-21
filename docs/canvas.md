@@ -13,11 +13,11 @@ Layout 10 lets a rider build a local instrument cluster around the telemetry and
 - Solid, map, camera, image, and other local backgrounds.
 - Local image assets with optional JSON import/export.
 
-Canvas is local-first. Cloud synchronization and a dashboard marketplace are not part of this public product scope.
+Canvas keeps configurations on the device. The current public product scope focuses on personal dashboards rather than cloud synchronization or a dashboard marketplace.
 
 ## Limits
 
-Map, camera, media, and image widgets depend on permissions, storage, network, and device resources. A failed optional widget should not hide the core telemetry or make the entire dashboard unusable.
+Map, camera, media, and image widgets depend on permissions, storage, network, and device resources. Core telemetry remains visible when an optional widget encounters an issue.
 
 ## Related paths
 

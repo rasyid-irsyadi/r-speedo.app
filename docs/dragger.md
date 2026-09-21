@@ -2,7 +2,7 @@
 
 ## What this path is for
 
-Layout 8 is a GPS-based acceleration timing and comparison path. It is not Road Dyno and it is not official race timing equipment.
+Layout 8 is the GPS-based acceleration timing and comparison path. Road Dyno handles setup comparison; Dragger handles rider performance timing.
 
 ## What it measures
 
@@ -17,14 +17,14 @@ Layout 8 is a GPS-based acceleration timing and comparison path. It is not Road 
 - Ghost and rival comparison.
 - Automatic or manual submit choices.
 - Leaderboard slices, run detail, public evidence, and race-card sharing.
-- Rescue/sync behavior for runs that were recorded locally but could not immediately upload.
+- Rescue/sync behavior for runs recorded on the device while connectivity is unavailable.
 
 ## Limits
 
 - Timing depends on phone GNSS, sample rate, start detection, route shape, mounting, filtering, and signal quality.
-- A GPS run is useful for rider comparison but is not sanctioned or laboratory timing.
-- Public evidence is coordinate-reduced; raw traces are not the public product view.
-- Hardware telemetry can strengthen evidence but does not turn GPS timing into certified instrumentation.
+- A GPS run provides practical rider-comparison timing; sanctioned timing requires dedicated certified equipment.
+- Public evidence shows coordinate-reduced route context.
+- Hardware telemetry strengthens evidence while the timing remains GPS-based.
 
 ## Related paths
 

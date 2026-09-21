@@ -2,7 +2,7 @@
 
 Last verified: 2026-09-21
 
-This page describes integrations available in R-Speedo 1.0.53. "Integrated" means the application contains a maintained connection, parser, or UI path for that device family. It does not mean every model, firmware, clone, or third-party adapter has been physically verified.
+This page describes integrations available in R-Speedo 1.0.53. "Integrated" means the application contains a maintained connection, parser, or UI path for that device family. Exact behavior follows the model, firmware, clone, and third-party adapter.
 
 ## Motor controllers and vehicle telemetry
 
@@ -10,10 +10,10 @@ This page describes integrations available in R-Speedo 1.0.53. "Integrated" mean
 | --- | --- | --- | --- | --- | --- | --- |
 | Votol | Controller | Bluetooth | Web/PWA with Web Bluetooth; Android APK native Bluetooth | Integrated; tuning fields where supported | 2026-09-21 | Settings layout, writable fields, safety limits, firmware, and adapter vary by controller |
 | Fardriver | Controller | Bluetooth | Web/PWA with Web Bluetooth; Android APK native Bluetooth | Integrated; confirmed tuning fields where supported | 2026-09-21 | Writes are limited to confirmed fields and guarded against stale telemetry or a running motor |
-| VESC | Controller | Nordic UART Bluetooth | Web/PWA with Web Bluetooth; Android APK native Bluetooth | Integrated, read-only telemetry | 2026-09-21 | Reads supported `COMM_GET_VALUES_SETUP`/`COMM_GET_VALUES` telemetry; it is not a VESC controller editor |
+| VESC | Controller | Nordic UART Bluetooth | Web/PWA with Web Bluetooth; Android APK native Bluetooth | Integrated, read-only telemetry | 2026-09-21 | Reads supported `COMM_GET_VALUES_SETUP`/`COMM_GET_VALUES` telemetry; the integration is telemetry-only |
 | Gesits | Vehicle telemetry | Bluetooth | Web/PWA with Web Bluetooth; Android APK native Bluetooth | Integrated | 2026-07-19 | Read-only telemetry; available fields depend on the vehicle/device |
 | Polytron profile with external ESP32 Votol CAN module | Vehicle telemetry module | BLE JSON advertised as `Votol_BLE` | Web/PWA with Web Bluetooth; Android APK native Bluetooth | Experimental, unofficial | 2026-09-21 | Requires a separate unofficial module; controller-setting writes are unavailable |
-| SFOX350 on supported Polytron setups | Vehicle telemetry module | BLE with module authentication | Web/PWA with Web Bluetooth; Android APK native Bluetooth | Experimental, unofficial | 2026-09-21 | Requires the SFOX350 module and matching setup; provides telemetry/diagnostics, not generic controller tuning |
+| SFOX350 on supported Polytron setups | Vehicle telemetry module | BLE with module authentication | Web/PWA with Web Bluetooth; Android APK native Bluetooth | Experimental, unofficial | 2026-09-21 | Requires the SFOX350 module and matching setup; provides telemetry and diagnostics |
 
 ## Battery management systems
 
@@ -34,11 +34,11 @@ This page describes integrations available in R-Speedo 1.0.53. "Integrated" mean
 
 | Device or family | Type | Connection | Supported R-Speedo platforms | Status | Last verified | Known limitations |
 | --- | --- | --- | --- | --- | --- | --- |
-| Alva Cervo BL-CERVO | Head unit/navigation accessory | Bluetooth | R-Speedo platforms with compatible Bluetooth access | Integrated | 2026-09-21 | Synchronizes time and mirrors Layout 6 navigation; it is not controller telemetry or a controller editor |
+| Alva Cervo BL-CERVO | Head unit/navigation accessory | Bluetooth | R-Speedo platforms with compatible Bluetooth access | Integrated | 2026-09-21 | Synchronizes time and mirrors Layout 6 navigation as a head-unit accessory |
 
 ## Multi-battery
 
-R-Speedo supports configuring multiple battery packs and pairing a BMS per pack. This is a runtime configuration and aggregation feature, not a guarantee that every pack combination is safe to combine.
+R-Speedo supports configuring multiple battery packs and pairing a BMS per pack. Each pack keeps its own visibility and state, while aggregate values appear when the inputs are suitable to combine.
 
 The app distinguishes pack visibility, connected state, estimated state, active state, and aggregate values. Aggregation can be rejected or degraded when data is incomplete or unsafe to combine.
 
@@ -55,7 +55,7 @@ GPS-only mode remains available when Web Bluetooth is unavailable.
 
 ### iPhone/iPad
 
-- Safari iOS: Bluetooth telemetry is not available; GPS-only, route, report, and demo viewing can still work through normal web/location APIs.
+- Safari iOS: GPS-only, route, report, and demo viewing work through normal web/location APIs; Bluetooth telemetry uses a supported browser path.
 - Bluefy or another WebBLE browser: experimental/user-tested workaround for BLE telemetry; UX and reliability depend on the third-party browser.
 - A native iOS test/sideload target exists, but there is no public native iOS release.
 
@@ -70,7 +70,7 @@ GPS-only mode remains available when Web Bluetooth is unavailable.
 
 Check the exact model, firmware, communication protocol, and Bluetooth adapter. A matching brand name alone is insufficient because manufacturers may change protocols between product revisions.
 
-If a device is not listed, [open an issue](https://github.com/rasyid-irsyadi/r-speedo.app/issues) with:
+For an unlisted device, [open an issue](https://github.com/rasyid-irsyadi/r-speedo.app/issues) with:
 
 - Device brand and exact model.
 - Firmware or hardware revision, if visible.

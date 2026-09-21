@@ -8,7 +8,7 @@ R-Speedo is a PWA and Android EV dashboard that uses phone GPS and, when availab
 
 ## Does R-Speedo require Bluetooth?
 
-No. GPS-only mode supports speed, route, distance, basic trip/report features, and GPS-based Dragger attempts. Bluetooth is required for controller, battery-cell, current, fault, tire-pressure, and other hardware telemetry.
+GPS-only mode supports speed, route, distance, basic trip/report features, and GPS-based Dragger attempts. Compatible Bluetooth hardware adds controller, battery-cell, current, fault, tire-pressure, and other telemetry.
 
 ## Does R-Speedo require internet access?
 
@@ -24,11 +24,11 @@ There is an experimental Polytron profile for an external ESP32 Votol CAN module
 
 ## Can R-Speedo tune a controller?
 
-For supported protocols, yes. Votol exposes controller setting pages and Fardriver exposes confirmed writable fields with safety warnings and guards. VESC, Gesits, Polytron, and SFOX350 paths remain read-only or diagnostic where stated. It is not a universal editor for every controller.
+For supported protocols, yes. Votol exposes controller setting pages and Fardriver exposes confirmed writable fields with safety warnings and guards. VESC, Gesits, Polytron, and SFOX350 paths provide read-only or diagnostic telemetry where stated.
 
 ## What does multi-battery support mean?
 
-You can pair a BMS per pack, keep pack visibility, see connected/estimated/active state, and use guarded aggregate telemetry. R-Speedo can degrade or refuse an aggregate when pack data is incomplete or unsafe to combine; it does not claim every pack combination is safe.
+You can pair a BMS per pack, keep pack visibility, see connected/estimated/active state, and use guarded aggregate telemetry. Incomplete or incompatible pack data keeps the display at per-pack or degraded aggregate state.
 
 ## What is the difference between the PWA and Android APK?
 
@@ -36,11 +36,11 @@ The PWA runs from a browser and can be installed where browser support allows. B
 
 ## Does R-Speedo work on iPhone or iPad?
 
-Safari can be used for GPS-only web features where location support is available, but Safari does not provide native Web Bluetooth telemetry. Bluefy or another WebBLE browser may work as an experimental user-tested workaround. A native iOS test/sideload target exists, but there is no public native iOS release.
+Safari supports GPS-only web features where location support is available. Bluefy or another WebBLE browser provides an experimental Bluetooth path, and a native iOS test/sideload target exists. Android is the public premium native path.
 
 ## What is Layout 8 Dragger?
 
-Layout 8 Dragger is a GPS-based performance mode. It measures split times, compares against personal best or a rival ghost, syncs eligible runs to a leaderboard, and exposes public evidence without raw coordinates. It is not official race timing equipment. See [reports and data](reports-and-data.md).
+Layout 8 Dragger is a GPS-based performance mode. It measures split times, compares against personal best or a rival ghost, syncs eligible runs to a leaderboard, and exposes public evidence with coordinate-reduced route context. It provides practical rider comparison timing. See [reports and data](reports-and-data.md).
 
 ## What is Layout 7 Motovlog?
 
@@ -48,7 +48,7 @@ Layout 7 is a riding-vlog workflow: camera recording, pause/resume, snapshots, g
 
 ## What is Layout 9 road Dyno?
 
-Layout 9 compares paired local road pulls and can analyze time, energy, voltage sag, temperature, and minimum wheel-power/torque estimates when enough data is available. Readiness, cooldown, road, wind, slope, vehicle configuration, GNSS, and telemetry quality affect the result. It is not a chassis dynamometer.
+Layout 9 compares paired local road pulls and can analyze time, energy, voltage sag, temperature, and minimum wheel-power/torque estimates when enough data is available. Readiness, cooldown, road, wind, slope, vehicle configuration, GNSS, and telemetry quality affect the road-based estimate.
 
 ## What is Layout 10 custom Canvas?
 
@@ -56,11 +56,11 @@ Layout 10 lets users arrange telemetry, media, map, camera, image, text, and ico
 
 ## What is Hall of Fame?
 
-Hall of Fame is an opt-in monthly public board for distance, elevation, and efficiency. New eligible foreground rides can contribute after joining, while personal reports remain available if synchronization fails. It is separate from official race timing and does not expose raw route coordinates.
+Hall of Fame is an opt-in monthly public board for distance, elevation, and efficiency. New eligible foreground rides can contribute after joining, while personal reports remain available if synchronization fails. The board focuses on public performance summaries with coordinate-reduced route context.
 
 ## What does Cervo support do?
 
-For a supported Alva Cervo BL-CERVO head unit, R-Speedo can synchronize time and mirror Layout 6 navigation. This integration does not edit the vehicle controller.
+For a supported Alva Cervo BL-CERVO head unit, R-Speedo synchronizes time and mirrors Layout 6 navigation. Cervo fills the head-unit/navigation role.
 
 ## Where is the hardware Shop available?
 
@@ -80,16 +80,16 @@ APK access is managed through an R-Speedo account and purchase/activation status
 
 ## What data does EV analytics collect?
 
-EV analytics uses an anonymous app-device identifier with privacy guards and reduced location-derived metrics. Web/PWA and Android controls can differ, so review the current in-app consent text. Analytics is separate from optional live-rider location sharing. See [privacy](privacy.md).
+EV analytics uses an anonymous app identifier, privacy filtering, and reduced location-derived metrics. Web/PWA and Android controls can differ, so review the current in-app consent text. Analytics is separate from optional live-rider location sharing. See [privacy](privacy.md).
 
 ## Can R-Speedo replace the vehicle's original instrument cluster?
 
-Do not treat it as the only safety-critical instrument. Phones, GPS, Bluetooth, background execution, configuration, and third-party hardware can fail or drift. Follow manufacturer limits and local regulations.
+Use it alongside safety-critical instruments. Phones, GPS, Bluetooth, background execution, configuration, and third-party hardware can fail or drift. Follow manufacturer limits and local regulations.
 
 ## Why do speed, state of charge, range, or Dragger times differ from another display?
 
-The displays may use different sensors, calibration values, sampling intervals, filters, capacity settings, start detection, or estimation models. See the [EV telemetry guide](ev-telemetry-guide.md).
+Different sensors, calibration values, sampling intervals, filters, capacity settings, start detection, or estimation models can produce different values. See the [EV telemetry guide](ev-telemetry-guide.md).
 
-## What should I do if my device is not listed?
+## What should I do if my device is unlisted?
 
-Open a [GitHub issue](https://github.com/rasyid-irsyadi/r-speedo.app/issues) with the exact model, revision, Bluetooth name, platform, and observed result. Do not include credentials, license tokens, raw traces, or location history.
+Open a [GitHub issue](https://github.com/rasyid-irsyadi/r-speedo.app/issues) with the exact model, revision, Bluetooth name, platform, and observed result. Keep the report limited to device and connection details.

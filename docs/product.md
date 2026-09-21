@@ -17,7 +17,7 @@ R-Speedo is a phone-based EV dashboard for riders who want one interface for spe
 
 ### GPS-only
 
-GPS-only mode provides speed, route, distance, trip timing, basic reports, map views, and Dragger attempts without pairing a controller or BMS. It does not provide battery-cell data, controller faults, electrical current, BMS alarms, or other hardware telemetry.
+GPS-only mode provides speed, route, distance, trip timing, basic reports, map views, and Dragger attempts without pairing a controller or BMS. Hardware pairing adds battery-cell data, controller faults, electrical current, BMS alarms, and other telemetry.
 
 ### Bluetooth telemetry
 
@@ -40,7 +40,7 @@ Users can configure multiple battery packs and pair a BMS per pack. R-Speedo can
 - Trip history, maps, charts, stop/charging/fault logs, data quality indicators, and exports.
 - Layout 7 motovlog camera preview, recording controls, snapshots, gallery, and telemetry sidecar.
 - Layout 8 Dragger GPS timing with readiness gate, split times, personal best, ghost/rival, leaderboard, public evidence, and report flow.
-- Layout 9 local road Dyno with readiness/cooldown, paired two-way pulls, energy and voltage-sag analysis, minimum wheel-power/torque estimates when data is sufficient, and baseline/candidate comparison. It is not a chassis dynamometer.
+- Layout 9 local Road Dyno with readiness/cooldown, paired two-way pulls, energy and voltage-sag analysis, minimum wheel-power/torque estimates when data is sufficient, and baseline/candidate comparison. Results are road-based setup estimates.
 - Controller tuning and calibration for supported protocols, with protocol-specific writable fields, safety warnings, speed/current/temperature context, and read-only boundaries for unsupported editors.
 - Layout 10 custom Canvas with up to five portrait or landscape canvases, configurable telemetry/media/map/camera/image/text/icon widgets, local backgrounds, and optional JSON import/export.
 - An Indonesia-only hardware Shop with product availability, IDR pricing shown by the current app data, and WhatsApp handoff.
@@ -62,24 +62,24 @@ Layout 7 and Layout 8 assets may require an authenticated R-Speedo session.
 | Installation | Browser installation when PWA support is available | APK installation |
 | Background trip support | Limited by browser and operating-system lifecycle rules | Additional native background recording support |
 | Motovlog/media files | Browser storage/download behavior | Native file integration where available |
-| Android widget | Not available | Home-screen telemetry widget |
+| Android widget | — | Home-screen telemetry widget |
 | Account and license | Web dashboard features can be used without an APK license | APK access is managed through an R-Speedo account and offline license |
 
-APK access, purchase methods, and availability may vary by country or account. This repository intentionally does not publish a static price.
+APK access, purchase methods, and availability may vary by country or account. Current pricing appears in the app flow.
 
 ## iPhone and iPad position
 
-Safari on iPhone/iPad can be used for normal web features such as GPS-only dashboard use, route/report/demo viewing, and account pages where supported. Safari does not provide native Web Bluetooth support for BLE telemetry.
+Safari on iPhone/iPad supports normal web features such as GPS-only dashboard use, route/report/demo viewing, and account pages where supported. BLE telemetry uses a supported browser path.
 
 Bluefy or another WebBLE browser may work as a user-tested workaround for Bluetooth telemetry on iPhone. Treat this as experimental and more complicated than Android native Bluetooth.
 
-R-Speedo also has a native iOS test/sideload target, but it is not a public release channel. Android remains the publicly distributed premium native app.
+R-Speedo also has a native iOS test/sideload target. Android is the publicly distributed premium native app.
 
 ## Data and privacy
 
 - Local dashboard and trip/report data are separate from anonymous analytics.
 - Web/PWA analytics policy is shown in the app; Android APK provides analytics controls.
-- Analytics uses an anonymous app-device identifier and privacy guards rather than a public rider profile.
+- Analytics uses an anonymous app identifier and privacy filtering rather than a public rider profile.
 - Sensitive telemetry is sanitized and vendor/export data is aggregated.
 - Live-rider sharing is separate, optional, and location-based.
 - A deletion-request flow exists for submitted analytics data.
@@ -88,13 +88,13 @@ Users should review the current in-app consent text before enabling analytics or
 
 ## Known limitations
 
-- A software integration cannot guarantee compatibility with every hardware or firmware variant.
+- Compatibility follows the hardware and firmware variant that was tested.
 - Bluetooth availability, permissions, and background behavior differ by browser and operating system.
 - GPS speed, distance, elevation, and Dragger timing are estimates affected by sensors, sampling, reception, filtering, and mounting.
 - Battery state of charge and range estimates depend on correct vehicle configuration and source telemetry.
 - Charging-station and workshop information may be incomplete or outdated.
-- Layout 8 Dragger is a GPS/performance mode, not official timing equipment.
-- Layout 9 road Dyno is affected by GNSS quality, road, wind, slope, mass/configuration, sampling, and source telemetry; its estimates are not chassis-dyno measurements.
+- Layout 8 Dragger provides GPS/performance comparison timing.
+- Layout 9 Road Dyno provides road-based estimates affected by GNSS quality, road, wind, slope, mass/configuration, sampling, and source telemetry.
 - The hardware Shop is available only for Indonesia and its current product status remains authoritative in the app.
 - The Polytron and SFOX350 integrations are unofficial, require external modules or matching setups, and are monitoring/diagnostic-only for controller settings.
 

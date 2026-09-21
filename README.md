@@ -43,7 +43,7 @@ Use trip reports and exports as evidence. Use **Road Dyno** to compare paired se
 
 ## Screenshots and demo
 
-The public repository includes the media currently supplied for R-Speedo documentation and marketing. Images are shown below; videos are linked because GitHub does not render repository MP4 files inline in Markdown.
+The public repository includes the media currently supplied for R-Speedo documentation and marketing. Images are shown below; videos open from their repository links.
 
 ### Featured images
 
@@ -86,22 +86,21 @@ All supplied media remains available in [`media/`](media/):
 | BMS | JBD | Integrated, read-only telemetry |
 | Sensor | BLE TPMS front/rear | Integrated where advertisement format is supported |
 
-An integrated brand or protocol is not a guarantee that every model, firmware version, clone, or third-party Bluetooth adapter will work. See the [compatibility notes](docs/compatibility.md) before choosing hardware.
+Compatibility follows the exact model, firmware, adapter, browser, and platform. See the [compatibility notes](docs/compatibility.md) before choosing hardware.
 
 ## Important limitations
 
 - Web/PWA Bluetooth requires a browser and operating system that implement Web Bluetooth.
-- Safari on iPhone/iPad does not provide native Web Bluetooth support; GPS-only use still works where normal web/location APIs work.
-- Bluefy or other WebBLE browsers on iPhone are user-tested workarounds, not the same as native iOS support.
-- A native iOS test/sideload target exists, but there is no public native iOS release.
-- GPS-only mode cannot provide controller, cell, fault, current, or other hardware telemetry.
-- Layout 8 Dragger is a GPS/performance mode with evidence and quality gates; it is not official race timing equipment.
-- Layout 9 road Dyno produces practical estimates from road and telemetry data; it is not a chassis dynamometer.
+- Safari on iPhone/iPad supports GPS/location features; Bluefy or another WebBLE browser provides an experimental Bluetooth path.
+- Native iOS is available as a test/sideload target; Android is the publicly distributed premium native path.
+- GPS-only mode provides location, speed, route, trip, and report data; hardware fields appear when compatible Bluetooth sources are connected.
+- Layout 8 Dragger provides GPS comparison timing with evidence and quality gates.
+- Layout 9 Road Dyno provides practical road-based setup estimates from paired pulls and telemetry.
 - Mobile operating systems may suspend browser activity in the background; the Android APK provides additional native background support.
 - Charging-station and workshop community data can be incomplete or outdated.
-- Polytron integration requires an external unofficial module and does not support writing controller settings.
-- Controller tuning is protocol-specific. Votol and confirmed Fardriver fields can expose settings writes with safety warnings; VESC, Gesits, Polytron, and SFOX350 telemetry paths do not become generic controller editors.
-- R-Speedo is a monitoring aid, not a replacement for manufacturer limits, calibrated instruments, or safe riding practices.
+- Polytron integration uses an external unofficial module and keeps controller settings read-only.
+- Controller tuning follows each protocol: Votol and confirmed Fardriver fields can expose settings writes with safety warnings; VESC, Gesits, Polytron, and SFOX350 provide read-only or diagnostic paths.
+- Use R-Speedo alongside manufacturer limits, calibrated instruments, and safe riding practices.
 
 ## Documentation
 
@@ -117,9 +116,9 @@ An integrated brand or protocol is not a guarantee that every model, firmware ve
 
 ## Ringkasan Bahasa Indonesia
 
-R-Speedo adalah dashboard PWA dan Android dengan sepuluh layout yang mengubah ponsel menjadi panel instrumen kendaraan listrik. Aplikasi dapat memakai GPS saja atau membaca telemetri Bluetooth dari controller Votol/Fardriver/VESC, kendaraan Gesits, BMS JK/Daly/ANT/JBD, TPMS BLE, dan modul Polytron/SFOX350 yang tidak resmi. R-Speedo juga memiliki tuning controller berbasis protokol, multi-battery dengan view per pack, peta/rute, sesi charging, report perjalanan, motovlog, Dragger, road Dyno, Canvas kustom, Hall of Fame, Shop hardware Indonesia, live rider, analytics anonim, APK premium, mirror navigasi Cervo, dan widget Android.
+R-Speedo adalah dashboard PWA dan Android dengan sepuluh layout yang mengubah ponsel menjadi panel instrumen kendaraan listrik. Aplikasi dapat memakai GPS saja atau membaca telemetri Bluetooth dari controller Votol/Fardriver/VESC, kendaraan Gesits, BMS JK/Daly/ANT/JBD, TPMS BLE, dan modul Polytron/SFOX350 pihak ketiga. R-Speedo juga memiliki tuning controller berbasis protokol, multi-battery dengan view per pack, peta/rute, sesi charging, report perjalanan, motovlog, Dragger, Road Dyno, Canvas kustom, Hall of Fame, Shop hardware Indonesia, live rider, analytics anonim, APK premium, mirror navigasi Cervo, dan widget Android.
 
-Dukungan perangkat tetap bergantung pada model, firmware, adapter, browser, sistem operasi, dan hasil verifikasi nyata. Harga dan metode pembayaran mengikuti flow resmi di aplikasi agar tidak basi.
+Dukungan perangkat mengikuti model, firmware, adapter, browser, sistem operasi, dan hasil verifikasi nyata. Harga dan metode pembayaran tersedia di flow resmi aplikasi.
 
 ## Official project
 
@@ -127,7 +126,7 @@ Dukungan perangkat tetap bergantung pada model, firmware, adapter, browser, sist
 - Maintainer: [Rasyid Irsyadi](https://github.com/rasyid-irsyadi)
 - Corrections: [open an issue](https://github.com/rasyid-irsyadi/r-speedo.app/issues)
 
-R-Speedo is an independent project. References to vehicle, controller, BMS, browser, and platform brands do not imply affiliation or endorsement.
+R-Speedo is an independent project. References to vehicle, controller, BMS, browser, and platform brands describe compatibility context.
 
 ## License and trademarks
 

@@ -16,15 +16,15 @@ Layout 6 and the Route panel help a rider plan a trip, understand energy needs, 
 
 ## Data behavior
 
-The route estimate combines GPS, vehicle profile, battery/range settings, current telemetry, and map data when available. A route can remain useful with degraded or estimated inputs; missing controller/BMS data does not become fake hardware telemetry.
+The route estimate combines GPS, vehicle profile, battery/range settings, current telemetry, and map data when available. Hardware fields appear when their controller/BMS sources are connected; route planning remains useful with estimated inputs.
 
-Charging stations and workshops use local baseline/cache data with optional API refresh. A failed refresh should not erase a valid local baseline or cached result.
+Charging stations and workshops combine available device data with refreshed community information. A refresh problem leaves the rider with the last useful result when one is available.
 
 ## Limits
 
 - ETA, range, energy, and arrival SOC are estimates affected by traffic/data provider, speed, slope, wind, load, battery condition, configuration, and GPS quality.
 - Web/PWA map and search behavior depends on network, browser permissions, and map provider availability.
-- GPS-only mode cannot know cell voltage, controller current, BMS fault state, or other hardware fields that were never transmitted.
+- GPS-only mode focuses on location, motion, route, and trip data; cell voltage, controller current, BMS fault state, and other hardware fields appear when transmitted by compatible hardware.
 - Community station/workshop information can be incomplete, stale, or awaiting moderation.
 - Live-rider sharing is optional and separate from local route/report data and anonymous analytics.
 

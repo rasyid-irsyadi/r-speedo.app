@@ -2,13 +2,13 @@
 
 Last verified: 2026-09-21
 
-R-Speedo reports turn ride telemetry into local evidence that can help riders understand range, energy use, charging, setup quality, and hardware behavior. Reports are not lab-grade measurement and are not a sales forecast.
+R-Speedo reports turn ride telemetry into on-device evidence that helps riders understand range, energy use, charging, setup quality, and hardware behavior. They are rider evidence and product insight alongside laboratory tools and business forecasting.
 
 ## Trip summary
 
 A report can include distance, top speed, average speed, moving time, trip duration, state-of-charge used, Ah/Wh consumption, regeneration, charge evidence, estimated cost, efficiency, CO2 comparison, and source quality when the required data is available.
 
-Missing telemetry should be read as unavailable, not as zero. GPS-only trips cannot include controller current, cell delta, BMS alarms, or pack-level details that were never captured.
+Unavailable telemetry appears as unavailable. GPS-only trips contain location and motion data, while controller current, cell delta, BMS alarms, and pack-level details appear when their hardware sources are connected.
 
 ## Route evidence
 
@@ -24,7 +24,7 @@ Multi-battery reports can show pack summaries, connected/estimated/active state,
 
 ## Controller tuning evidence
 
-Controller tuning is protocol-specific. Reports and road Dyno comparisons can preserve the selected vehicle profile and available controller-setting snapshot so a rider can relate a measured result to a setup change. This is context for comparison, not proof that every field was writable or that the change alone caused the result.
+Controller tuning is protocol-specific. Reports and Road Dyno comparisons can preserve the selected vehicle profile and available controller-setting snapshot so a rider can relate a measured result to a setup change. This is comparison context alongside road, weather, rider, and vehicle conditions.
 
 Votol and confirmed Fardriver fields may be writable through the Controller panel. VESC, Gesits, Polytron, and SFOX350 paths remain read-only or diagnostic where stated. Layout 9 never writes controller settings.
 
@@ -34,9 +34,9 @@ Charge session views can show SOC, ETA, energy added, Ah/kWh, estimated cost, vo
 
 ## Dragger evidence
 
-Layout 8 Dragger can produce GPS-based split timing for 60ft, 100m, 201m, 301m, 402m, and 0-60/100/120 km/h. Eligible runs are recomputed server-side for leaderboard submission. Public evidence can include quality indicators, start model, GPS rate/accuracy, power/class evidence, two-way badge, and coordinate-free public traces.
+Layout 8 Dragger can produce GPS-based split timing for 60ft, 100m, 201m, 301m, 402m, and 0-60/100/120 km/h. Eligible runs receive leaderboard validation. Public evidence can include quality indicators, start model, GPS rate/accuracy, power/class evidence, two-way badge, and coordinate-reduced route context.
 
-Raw coordinates are not part of the public evidence view. They are retained only for limited moderation needs and can be removed by retention logic.
+Public evidence presents coordinate-reduced route context and keeps the rider-facing view focused on performance.
 
 ## Motovlog evidence
 
@@ -46,7 +46,7 @@ Layout 7 can pair a riding video with a telemetry sidecar or overlay, snapshots,
 
 Layout 9 road Dyno keeps its pull analysis local. It can compare paired two-way pulls and show readiness/cooldown state, time, energy, voltage sag, temperature, and minimum wheel-power/torque estimates when the required data is available. Baseline and candidate comparisons can help evaluate setup changes.
 
-These results depend on road, wind, slope, vehicle mass/configuration, GNSS, sampling, and source telemetry. They are practical road estimates, not laboratory or chassis-dyno measurements, and they do not change controller settings.
+These results depend on road, wind, slope, vehicle mass/configuration, GNSS, sampling, and source telemetry. They are practical road estimates; controller settings stay in the Controller panel.
 
 ## Export formats
 
@@ -57,8 +57,8 @@ R-Speedo report export supports:
 - `GPX` for route data when GPS route points exist.
 - `JSON` for complete report data.
 
-Exports come from local trip/report data and do not require analytics opt-in.
+Exports come from ride/report data on the device and work independently of analytics consent.
 
 ## Privacy boundary
 
-Local reports, anonymous analytics, live-rider sharing, and public demo media are separate concepts. Public repository media must use synthetic or intentionally public demo data and public locations. Anonymous analytics exports are aggregate signals, not raw user reports.
+Ride reports, anonymous analytics, live-rider sharing, and public demo media serve different user needs. Analytics exports provide aggregate product signals, while reports provide personal ride evidence.

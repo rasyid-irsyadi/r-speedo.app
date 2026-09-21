@@ -16,15 +16,15 @@ Layout 7 is a riding-vlog workflow: record the ride and keep useful EV telemetry
 
 Layout 7 assets may require an authenticated R-Speedo session. Android has the deepest native file and background integration; browser and iOS behavior depends on platform storage, camera, microphone, and lifecycle limits.
 
-## What the video does not prove
+## Reading Motovlog telemetry
 
-Video telemetry is evidence of what the phone received, not a laboratory measurement. Missing BLE frames, GPS gaps, camera clock differences, sensor calibration, and background suspension can make the overlay or sidecar incomplete.
+Video telemetry records what the phone received during the ride. BLE gaps, GPS gaps, camera clock differences, sensor calibration, and background suspension can make the overlay or sidecar incomplete.
 
 ## Limits
 
 - Camera, microphone, Bluetooth intercom, storage, file playback, and sharing depend on browser/OS permissions and device capabilities.
 - Large recordings can exceed browser/WebView memory or origin-storage limits.
-- A video with telemetry does not replace the original controller/BMS report or manufacturer diagnostics.
+- Use video telemetry alongside the original controller/BMS report and manufacturer diagnostics.
 
 ## Related paths
 

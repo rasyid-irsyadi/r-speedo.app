@@ -2,7 +2,7 @@
 
 Last verified: 2026-09-21
 
-R-Speedo combines data from a phone, motor controller, vehicle module, battery management system, TPMS sensor, and user configuration when those sources are available. The values describe different parts of the vehicle and should not be treated as interchangeable.
+R-Speedo combines data from a phone, motor controller, vehicle module, battery management system, TPMS sensor, and user configuration when those sources are available. Each field keeps the meaning and source of the component that supplied it.
 
 ## Controller and BMS roles
 
@@ -14,7 +14,7 @@ R-Speedo combines data from a phone, motor controller, vehicle module, battery m
 | BMS | Battery-pack monitoring and protection | Pack voltage/current, state of charge, cell voltages, temperatures, alarms |
 | TPMS | Tire pressure monitoring | Pressure, temperature, battery/freshness, warnings |
 
-A field appearing in an app does not prove that every connected device measures it directly. Some values may be estimated, derived, unavailable, or reported with device-specific units and conventions.
+An app field can be direct, derived, estimated, unavailable, or reported with device-specific units and conventions. The source label and context are part of interpreting it.
 
 ## Common values
 
@@ -28,11 +28,11 @@ Controller and BMS voltage readings can differ because they may be sampled at di
 
 ### Current and power
 
-Current sign and meaning are device-specific. A positive value may mean discharge on one device and charging or regeneration on another. Approximate electrical power is commonly derived from voltage multiplied by current, but it is not the same as mechanical wheel power.
+Current sign and meaning are device-specific. A positive value may mean discharge on one device and charging or regeneration on another. Approximate electrical power is commonly derived from voltage multiplied by current; mechanical wheel power needs additional road and vehicle evidence.
 
 ### Controller tuning
 
-R-Speedo is not one generic controller editor. Votol exposes settings pages and Fardriver exposes confirmed writable fields with safety guards. VESC, Gesits, Polytron, and SFOX350 integrations remain read-only or diagnostic where stated. A tuning comparison should record the protocol, profile, settings snapshot, battery configuration, and test conditions before drawing a conclusion.
+R-Speedo follows each controller protocol. Votol exposes settings pages and Fardriver exposes confirmed writable fields with safety guards. VESC, Gesits, Polytron, and SFOX350 integrations provide read-only or diagnostic paths where stated. A tuning comparison should record the protocol, profile, settings snapshot, battery configuration, and test conditions before drawing a conclusion.
 
 Layout 9 road Dyno may estimate a minimum wheel-power and torque value when sufficient motion, vehicle, and telemetry data is available. That estimate is affected by vehicle mass/configuration, road, slope, wind, GNSS quality, sampling, filtering, and source telemetry. Neither electrical power nor the road estimate is a chassis-dyno measurement.
 
@@ -42,7 +42,7 @@ State of charge is an estimate produced by the BMS, vehicle module, or R-Speedo 
 
 ### Range
 
-Range is an estimate, not a promise. It changes with recent energy use, speed, terrain, wind, load, temperature, tire pressure, battery condition, and configured capacity.
+Range is an estimate that changes with recent energy use, speed, terrain, wind, load, temperature, tire pressure, battery condition, and configured capacity.
 
 ### Temperature, cell delta, and faults
 
@@ -58,9 +58,9 @@ GPS-only mode is useful when no compatible Bluetooth device is available. It can
 - Layout 8 Dragger attempts with GPS quality gates.
 - Navigation and map features when network data is available.
 
-It cannot reconstruct cell voltages, controller current, internal temperatures, tire pressure, or hardware fault states that were never transmitted to the phone.
+GPS-only reports contain location and motion data; cell voltages, controller current, internal temperatures, tire pressure, and hardware fault states appear when transmitted by compatible hardware.
 
-The [W3C Geolocation specification](https://www.w3.org/TR/geolocation/) defines the browser geolocation interface but does not guarantee a particular sensor, sampling rate, or accuracy for every device.
+The [W3C Geolocation specification](https://www.w3.org/TR/geolocation/) defines the browser geolocation interface; sensor, sampling rate, and accuracy remain device-dependent.
 
 ## Bluetooth realities
 
@@ -78,21 +78,21 @@ Multiple packs need more than a combined number on screen. Capacity, voltage ran
 
 ## Dragger timing limits
 
-Layout 8 Dragger uses GPS samples, quality gates, server recomputation, and public evidence to make runs comparable. It still depends on phone GNSS quality, sample intervals, start reconstruction, route shape, elevation, and filtering. Treat it as a practical rider comparison tool, not official timing equipment.
+Layout 8 Dragger uses GPS samples, quality gates, validation, and public evidence to make runs comparable. It depends on phone GNSS quality, sample intervals, start reconstruction, route shape, elevation, and filtering. Use it as practical rider comparison timing.
 
 ## Road Dyno limits
 
-Layout 9 should be used only where a road pull can be performed legally and safely. Readiness and cooldown checks improve repeatability but cannot remove traffic, surface, weather, mounting, sensor, or telemetry variation. Compare paired runs under similar conditions and treat the output as setup guidance rather than a laboratory certificate.
+Layout 9 should be used where a road pull can be performed legally and safely. Readiness and cooldown checks improve repeatability while traffic, surface, weather, mounting, sensor, and telemetry variation remain part of the result. Compare paired runs under similar conditions and use the output as setup guidance.
 
 ## Calibration and verification
 
 Use a known reference when calibrating speed, wheel size, capacity, current direction, and other vehicle-specific values. Record the hardware model, firmware, test conditions, and R-Speedo settings so a result can be reproduced.
 
-Real hardware is the reference for its own limits. Do not change controller or battery protection settings solely to make two displays agree.
+Real hardware is the reference for its own limits. Keep controller and battery protection settings aligned with the hardware maker's guidance while calibrating displays.
 
 ## Safety boundary
 
-R-Speedo is a monitoring and trip-information tool. It does not replace:
+R-Speedo is a monitoring and trip-information tool. Use it alongside:
 
 - Manufacturer documentation and protection limits.
 - A road-legal instrument cluster where required.

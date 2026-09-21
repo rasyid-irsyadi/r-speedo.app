@@ -2,7 +2,7 @@
 
 ## What this path is for
 
-Layout 9 is a local setup-comparison tool for riders and tuners. It answers “did this change help under comparable road conditions?” It is not a chassis dynamometer and it does not write controller settings.
+Layout 9 is a setup-comparison tool for riders and tuners. It answers “did this change help under comparable road conditions?” Its output is a road-based estimate, while controller settings stay in the Controller panel.
 
 ## The tuning loop
 
@@ -15,7 +15,7 @@ Layout 9 is a local setup-comparison tool for riders and tuners. It answers “d
 
 ## Measured versus estimated
 
-Battery electrical power can be measured/derived from voltage and current. Minimum wheel-power/torque is an estimate from available road, vehicle, GPS, and telemetry evidence. The result is not a certified dyno number.
+Battery electrical power can be measured/derived from voltage and current. Minimum wheel-power/torque is an estimate from available road, vehicle, GPS, and telemetry evidence. Certified dyno measurements require dedicated test equipment.
 
 The Controller panel remains the place for supported settings writes. Layout 9 can use a controller-setting snapshot as comparison context but never changes the controller itself.
 
