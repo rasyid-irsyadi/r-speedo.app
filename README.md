@@ -1,27 +1,45 @@
 # R-Speedo
 
-R-Speedo is a PWA and Android dashboard that turns a phone into an EV instrument panel using GPS and optional Bluetooth telemetry from supported motor controllers and battery management systems.
+## Your phone, now an EV cockpit
 
-[Open R-Speedo](https://r-speedo.app/) · Last verified: 2026-09-21 · Current app version: 1.0.53
+Monitor, tune, record, navigate, and prove what your electric motorcycle is doing—from one phone-based cockpit.
 
-## What R-Speedo does
+R-Speedo combines live BLE telemetry, protocol-specific controller tuning, multi-battery intelligence, telemetry-backed Motovlog recording, route/charging tools, evidence-rich reports, and performance analysis.
 
-- Shows speed, battery, controller, trip, navigation, and charging-session information across ten dashboard layouts.
-- Reads supported Votol, Fardriver, and VESC controller telemetry, plus Gesits and an experimental unofficial Polytron module path.
-- Supports protocol-specific controller tuning: Votol settings and confirmed writable Fardriver fields include safety guards; VESC, Gesits, and Polytron module paths remain read-only where stated.
-- Reads supported JK, Daly, ANT, and JBD battery management systems over Bluetooth.
-- Can synchronize time and mirror Layout 6 navigation to a supported Alva Cervo BL-CERVO head unit.
-- Supports BLE TPMS sensors for front/rear pressure, temperature, battery/freshness, and warnings when available.
-- Works in GPS-only mode when no compatible Bluetooth hardware is available.
-- Provides route planning, charging-station and workshop context, trip reports, exportable ride data, and optional live-rider sharing.
-- Supports multiple configured battery packs with per-pack visibility and guarded aggregate telemetry.
-- Includes Layout 7 for motovlogging: camera recording, pause/resume, snapshots, gallery, intercom mic, telemetry sidecar/overlay, native storage, remux, and sharing.
-- Includes Layout 8 Dragger for GPS-based performance timing, evidence, ghost/rival runs, and leaderboards.
-- Includes Layout 9 road Dyno for local paired-pull analysis and Layout 10 Canvas for custom telemetry dashboards.
-- Turns controller/BMS telemetry into a tuning loop with calibration, per-pack visibility, trip evidence, road Dyno comparison, and reports; it does not pretend every controller has a generic editor.
-- Provides an Indonesia-only hardware Shop with product details and WhatsApp handoff.
-- Includes opt-in Hall of Fame boards, rider identity sync, and account-aware public performance history.
-- Runs as a web/PWA app and as an Android APK with native Bluetooth, background recording, file handling, offline licensing, start-on-boot, and a home-screen telemetry widget.
+[Open R-Speedo](https://r-speedo.app/) · [Check compatibility](docs/compatibility.md) · [Read the product overview](docs/product.md)
+
+Last verified: 2026-09-21 · Current app version: 1.0.53
+
+## Why riders use R-Speedo
+
+### Monitor
+
+See speed, SOC, range, voltage, current, power, temperature, faults, cell data, TPMS, GPS, and trip state when the connected hardware provides them. GPS-only mode still works without compatible BLE hardware.
+
+### Tune
+
+Tune supported controller protocols with safety context: Votol settings pages and confirmed Fardriver writable fields. Multi-battery users get per-pack visibility, BMS pairing, calibration context, and guarded aggregate telemetry. VESC, Gesits, Polytron, and SFOX350 remain read-only or diagnostic where stated.
+
+### Record
+
+Layout 7 is a real Motovlog workflow: camera recording, pause/resume, snapshots, gallery, intercom mic, telemetry sidecar/overlay, native storage, Android remux, and sharing.
+
+### Navigate
+
+Plan routes, understand ETA and energy, find charging stations and workshops, mirror navigation to supported Cervo head units, and optionally share live rider presence.
+
+### Prove
+
+Use trip reports and exports as evidence. Use **Road Dyno** to compare paired setup changes; use **Dragger** to measure acceleration splits, PBs, ghosts, rivals, and leaderboards. They are separate tools with different jobs.
+
+## Core capabilities
+
+- Ten dashboard layouts, including Tech Lab, map/navigation, Motovlog, Dragger, Road Dyno, and custom Canvas.
+- Reports with route, energy, regen, charging, temperature, cell delta, data quality, and PNG/CSV/GPX/JSON export.
+- Layout 10 Canvas with up to five local dashboards and telemetry/media/map/camera/image/text/icon widgets.
+- Indonesia-only hardware Shop with product details and WhatsApp handoff.
+- Opt-in Hall of Fame boards, rider identity sync, and account-aware public performance history.
+- Web/PWA and Android APK paths with native Bluetooth, background recording, offline licensing, start-on-boot, OTA support, and a home-screen telemetry widget.
 
 ## Screenshots and demo
 
@@ -87,6 +105,7 @@ An integrated brand or protocol is not a guarantee that every model, firmware ve
 
 ## Documentation
 
+- [Knowledge base index](docs/README.md)
 - [Product overview](docs/product.md)
 - [Hardware and platform compatibility](docs/compatibility.md)
 - [Frequently asked questions](docs/faq.md)
