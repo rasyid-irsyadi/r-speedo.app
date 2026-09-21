@@ -15,7 +15,8 @@ R-Speedo is a PWA and Android dashboard that turns a phone into an EV instrument
 - Works in GPS-only mode when no compatible Bluetooth hardware is available.
 - Provides route planning, charging-station and workshop context, trip reports, exportable ride data, and optional live-rider sharing.
 - Supports multiple configured battery packs with per-pack visibility and guarded aggregate telemetry.
-- Includes Layout 7 for motovlog recording/snapshots and Layout 8 Dragger for GPS-based performance timing, evidence, ghost/rival runs, and leaderboards.
+- Includes Layout 7 for motovlogging: camera recording, pause/resume, snapshots, gallery, intercom mic, telemetry sidecar/overlay, native storage, remux, and sharing.
+- Includes Layout 8 Dragger for GPS-based performance timing, evidence, ghost/rival runs, and leaderboards.
 - Includes Layout 9 road Dyno for local paired-pull analysis and Layout 10 Canvas for custom telemetry dashboards.
 - Turns controller/BMS telemetry into a tuning loop with calibration, per-pack visibility, trip evidence, road Dyno comparison, and reports; it does not pretend every controller has a generic editor.
 - Provides an Indonesia-only hardware Shop with product details and WhatsApp handoff.
@@ -24,12 +25,28 @@ R-Speedo is a PWA and Android dashboard that turns a phone into an EV instrument
 
 ## Screenshots and demo
 
-Public demo media uses selected R-Speedo assets and public-facing videos. Screenshots are selected to avoid account, home/work, payment, and admin data.
+The public repository includes the media currently supplied for R-Speedo documentation and marketing. Images are shown below; videos are linked because GitHub does not render repository MP4 files inline in Markdown.
 
-- [Dashboard demo](media/hero-dashboard.png)
-- [Trip report demo](media/report-demo.png)
-- [Controller/BMS tuning demo](media/controller-tuning-demo.mp4)
-- [Telemetry demo](media/telemetry-demo.mp4)
+### Images
+
+![2ABEDA9F](media/2ABEDA9F-CFFA-4258-BA80-F0C448CC83C0.png)
+![334A079B](media/334A079B-70AD-4D79-9052-27CF44BA01EF.png)
+![4eed2155](media/4eed2155c1547ad24cd5c1be687bfe8e.jpeg)
+![633fa1b9](media/633fa1b9-accb-4da8-b992-ef83d4aa2d01.jpg)
+![7e93f895](media/7e93f895-9fce-4e6a-8fa2-b32d5c585e2f.jpg)
+![IMG9983](media/IMG_9983.PNG)
+![IMG9984](media/IMG_9984.PNG)
+![IMG9985](media/IMG_9985.PNG)
+![Screenshot 2026-09-08](<media/Screen Shot 2026-09-08 at 16.22.00.png>)
+![Screenshot 2026-09-21 07.31](<media/Screen Shot 2026-09-21 at 07.31.25.png>)
+![Screenshot 2026-09-21 07.35](<media/Screen Shot 2026-09-21 at 07.35.48.png>)
+
+### Videos
+
+- [Facebook reel 1](media/r-speedo-facebook-reel-1.mp4)
+- [Facebook reel 2](media/r-speedo-facebook-reel-2.mp4)
+- [Facebook reel 1070770375360770](media/r-speedo-reel-1070770375360770.mp4)
+- [Video download duplicate](<media/video-a9d4f339-9697-4925-88a0-8906b99ddc38-1789191330%20(1).mp4>)
 
 ## Supported integrations
 

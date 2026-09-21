@@ -38,6 +38,10 @@ Layout 8 Dragger can produce GPS-based split timing for 60ft, 100m, 201m, 301m, 
 
 Raw coordinates are not part of the public evidence view. They are retained only for limited moderation needs and can be removed by retention logic.
 
+## Motovlog evidence
+
+Layout 7 can pair a riding video with a telemetry sidecar or overlay, snapshots, gallery state, and exported media. Video quality, storage, background behavior, audio, and platform support vary by browser, Android, iOS, camera, and available space.
+
 ## Road Dyno data
 
 Layout 9 road Dyno keeps its pull analysis local. It can compare paired two-way pulls and show readiness/cooldown state, time, energy, voltage sag, temperature, and minimum wheel-power/torque estimates when the required data is available. Baseline and candidate comparisons can help evaluate setup changes.

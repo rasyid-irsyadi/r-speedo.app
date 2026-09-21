@@ -42,6 +42,10 @@ Safari can be used for GPS-only web features where location support is available
 
 Layout 8 Dragger is a GPS-based performance mode. It measures split times, compares against personal best or a rival ghost, syncs eligible runs to a leaderboard, and exposes public evidence without raw coordinates. It is not official race timing equipment. See [reports and data](reports-and-data.md).
 
+## What is Layout 7 Motovlog?
+
+Layout 7 is a riding-vlog workflow: camera recording, pause/resume, snapshots, gallery, Bluetooth intercom mic, telemetry sidecar/overlay, native/web storage, and sharing. Android can remux supported MP4 recordings without re-encoding; browser and iOS behavior depends on platform storage and media limits.
+
 ## What is Layout 9 road Dyno?
 
 Layout 9 compares paired local road pulls and can analyze time, energy, voltage sag, temperature, and minimum wheel-power/torque estimates when enough data is available. Readiness, cooldown, road, wind, slope, vehicle configuration, GNSS, and telemetry quality affect the result. It is not a chassis dynamometer.
@@ -49,6 +53,10 @@ Layout 9 compares paired local road pulls and can analyze time, energy, voltage 
 ## What is Layout 10 custom Canvas?
 
 Layout 10 lets users arrange telemetry, media, map, camera, image, text, and icon widgets on up to five local portrait or landscape canvases. Canvas configuration can be exported or imported as JSON; locally selected image assets remain local unless the user exports or shares them.
+
+## What is Hall of Fame?
+
+Hall of Fame is an opt-in monthly public board for distance, elevation, and efficiency. New eligible foreground rides can contribute after joining, while personal reports remain available if synchronization fails. It is separate from official race timing and does not expose raw route coordinates.
 
 ## What does Cervo support do?
 

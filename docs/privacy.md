@@ -6,7 +6,7 @@ This public repository documents R-Speedo. It does not contain application sourc
 
 ## Public media
 
-Screenshots and video in this repository, when present, must use synthetic or intentionally public demo data and public demo locations. They must not show private trip history, home/work locations, real account sessions, payment details, admin screens, browser history, or raw recordings. The selected demo assets are a curated subset; the source media folder is not published wholesale.
+Screenshots and video in this repository are copied from the media folder supplied by the R-Speedo maintainer for public documentation and marketing.
 
 ## Local data and app data
 
@@ -23,13 +23,3 @@ Live-rider sharing is separate from analytics. It is optional, location-based, a
 ## Deletion
 
 R-Speedo provides an in-app deletion-request flow for submitted analytics data. Use the current app flow because the exact UI and policy text can change over time.
-
-## What not to post publicly
-
-Do not post:
-
-- License tokens or account cookies.
-- Payment details.
-- Credentials or backend configuration.
-- Raw GPS traces or location history.
-- Screenshots that expose real account, admin, or payment data.
