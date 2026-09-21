@@ -106,6 +106,8 @@ An integrated brand or protocol is not a guarantee that every model, firmware ve
 ## Documentation
 
 - [Knowledge base index](docs/README.md)
+- [Dashboard layouts](docs/layouts.md)
+- [Panels and workflows](docs/panels.md)
 - [Product overview](docs/product.md)
 - [Hardware and platform compatibility](docs/compatibility.md)
 - [Frequently asked questions](docs/faq.md)
