@@ -15,6 +15,28 @@ R-Speedo has ten dashboard layouts. Layouts 1–5 are fixed cockpit styles; Layo
 | 9 | Road Dyno | Paired road pulls, readiness/cooldown, baseline/candidate, energy, sag, temperature, and tuning guidance |
 | 10 | Custom Canvas | Up to five local dashboards with configurable telemetry/media/map/camera/image/text/icon widgets |
 
+## Fixed cockpit layouts
+
+### Layout 1 — Tesla-style cockpit
+
+A balanced everyday dashboard with a large speed readout, battery/SOC, gear, ODO/trip, location, range, voltage, current, power, and motor/controller temperature.
+
+### Layout 2 — Sloped cockpit
+
+A speed-first sloped gauge with RPM and gear context, battery/SOC, voltage, power, current, motor/controller temperature, ODO, trip, range, and location.
+
+### Layout 3 — Gecit-style cockpit
+
+A round speed gauge with range, trip, clock, configurable telemetry rows, vehicle indicators, and an optional mini-map. Its telemetry slots can be selected from Settings.
+
+### Layout 4 — Tilano-style cockpit
+
+A cockpit focused on speed and RPM with drive-mode context, battery/SOC and voltage, power/current, motor/controller temperature, attitude/inclinometer data when motion access is available, and an optional media player.
+
+### Layout 5 — Tech Lab
+
+A sensor-focused layout where the hero instrument can switch between speed, incline, compass, and level. Sensor cards expose pitch/roll/heading state, motion calibration, location, and configurable telemetry presets.
+
 ## How to choose
 
 - Want a clean everyday instrument panel? Choose Layout 1, 2, 3, or 4.
