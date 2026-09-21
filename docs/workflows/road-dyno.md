@@ -26,5 +26,5 @@ Road, wind, slope, mass/configuration, tire condition, GNSS, sampling, mounting,
 ## Related paths
 
 - [Dragger](dragger.md) for acceleration timing and leaderboard comparison.
-- [Reports and data](reports-and-data.md) for evidence/export.
-- [Controller tuning](compatibility.md) for protocol and writable-field boundaries.
+- [Reports and data](../reference/reports-and-data.md) for evidence/export.
+- [Controller tuning](../reference/compatibility.md) for protocol and writable-field boundaries.

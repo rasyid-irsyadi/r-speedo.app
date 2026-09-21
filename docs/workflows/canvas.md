@@ -23,4 +23,4 @@ Map, camera, media, and image widgets depend on permissions, storage, network, a
 
 - [Route and navigation](route-and-navigation.md) for the dedicated map workflow.
 - [Motovlog](motovlog.md) for camera recording.
-- [EV telemetry guide](ev-telemetry-guide.md) for interpreting the values placed on a Canvas.
+- [EV telemetry guide](../reference/ev-telemetry-guide.md) for interpreting the values placed on a Canvas.

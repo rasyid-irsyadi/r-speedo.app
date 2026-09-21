@@ -29,5 +29,5 @@ Video telemetry records what the phone received during the ride. BLE gaps, GPS g
 ## Related paths
 
 - [Route and navigation](route-and-navigation.md) for trip planning.
-- [Reports and data](reports-and-data.md) for interpretation and exports.
+- [Reports and data](../reference/reports-and-data.md) for interpretation and exports.
 - [Canvas](canvas.md) for custom telemetry dashboards.

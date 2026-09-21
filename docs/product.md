@@ -98,4 +98,4 @@ Users should review the current in-app consent text before enabling analytics or
 - The hardware Shop is available only for Indonesia and its current product status remains authoritative in the app.
 - The Polytron and SFOX350 integrations are unofficial, require external modules or matching setups, and are monitoring/diagnostic-only for controller settings.
 
-See [compatibility](compatibility.md), [reports and data](reports-and-data.md), [privacy](privacy.md), [frequently asked questions](faq.md), and the [EV telemetry guide](ev-telemetry-guide.md) for details.
+See [compatibility](reference/compatibility.md), [reports and data](reference/reports-and-data.md), [privacy](reference/privacy.md), [frequently asked questions](reference/faq.md), and the [EV telemetry guide](reference/ev-telemetry-guide.md) for details.

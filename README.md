@@ -6,7 +6,7 @@ Monitor, tune, record, navigate, and prove what your electric motorcycle is doin
 
 R-Speedo combines live BLE telemetry, protocol-specific controller tuning, multi-battery intelligence, telemetry-backed Motovlog recording, route/charging tools, evidence-rich reports, and performance analysis.
 
-[Open R-Speedo](https://r-speedo.app/) · [Check compatibility](docs/compatibility.md) · [Read the product overview](docs/product.md)
+[Open R-Speedo](https://r-speedo.app/) · [Check compatibility](docs/reference/compatibility.md) · [Read the product overview](docs/product.md)
 
 Last verified: 2026-09-21 · Current app version: 1.0.53
 
@@ -87,7 +87,7 @@ All supplied media remains available in [`media/`](media/):
 | BMS | JBD | Integrated, read-only telemetry |
 | Sensor | BLE TPMS front/rear | Integrated where advertisement format is supported |
 
-Compatibility follows the exact model, firmware, adapter, browser, and platform. See the [compatibility notes](docs/compatibility.md) before choosing hardware.
+Compatibility follows the exact model, firmware, adapter, browser, and platform. See the [compatibility notes](docs/reference/compatibility.md) before choosing hardware.
 
 ## Important limitations
 
@@ -109,11 +109,11 @@ Compatibility follows the exact model, firmware, adapter, browser, and platform.
 - [Dashboard layouts](docs/layouts.md)
 - [Panels and workflows](docs/panels.md)
 - [Product overview](docs/product.md)
-- [Hardware and platform compatibility](docs/compatibility.md)
-- [Frequently asked questions](docs/faq.md)
-- [Reports and data](docs/reports-and-data.md)
-- [Privacy notes](docs/privacy.md)
-- [EV telemetry guide](docs/ev-telemetry-guide.md)
+- [Hardware and platform compatibility](docs/reference/compatibility.md)
+- [Frequently asked questions](docs/reference/faq.md)
+- [Reports and data](docs/reference/reports-and-data.md)
+- [Privacy notes](docs/reference/privacy.md)
+- [EV telemetry guide](docs/reference/ev-telemetry-guide.md)
 
 ## Ringkasan Bahasa Indonesia
 

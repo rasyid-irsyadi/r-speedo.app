@@ -29,5 +29,5 @@ Layout 8 is the GPS-based acceleration timing and comparison path. Road Dyno han
 ## Related paths
 
 - [Road Dyno](road-dyno.md) for measuring setup changes.
-- [Reports and data](reports-and-data.md) for evidence and export.
+- [Reports and data](../reference/reports-and-data.md) for evidence and export.
 - [Route and navigation](route-and-navigation.md) for trip planning.
