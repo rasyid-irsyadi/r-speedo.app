@@ -27,24 +27,29 @@ R-Speedo is a PWA and Android dashboard that turns a phone into an EV instrument
 
 The public repository includes the media currently supplied for R-Speedo documentation and marketing. Images are shown below; videos are linked because GitHub does not render repository MP4 files inline in Markdown.
 
-### Images
+### Featured images
 
-![2ABEDA9F](media/2ABEDA9F-CFFA-4258-BA80-F0C448CC83C0.png)
-![334A079B](media/334A079B-70AD-4D79-9052-27CF44BA01EF.png)
-![4eed2155](media/4eed2155c1547ad24cd5c1be687bfe8e.jpeg)
-![633fa1b9](media/633fa1b9-accb-4da8-b992-ef83d4aa2d01.jpg)
-![7e93f895](media/7e93f895-9fce-4e6a-8fa2-b32d5c585e2f.jpg)
-![IMG9983](media/IMG_9983.PNG)
-![IMG9984](media/IMG_9984.PNG)
-![IMG9985](media/IMG_9985.PNG)
-![Screenshot 2026-09-08](<media/Screen Shot 2026-09-08 at 16.22.00.png>)
-![Screenshot 2026-09-21 07.31](<media/Screen Shot 2026-09-21 at 07.31.25.png>)
-![Screenshot 2026-09-21 07.35](<media/Screen Shot 2026-09-21 at 07.35.48.png>)
+![R-Speedo EV dashboard](media/2ABEDA9F-CFFA-4258-BA80-F0C448CC83C0.png)
+![R-Speedo trip report](media/334A079B-70AD-4D79-9052-27CF44BA01EF.png)
 
 ### Videos
 
 - [Facebook reel 1070770375360770](media/r-speedo-reel-1070770375360770.mp4)
-- [Video download duplicate](<media/video-a9d4f339-9697-4925-88a0-8906b99ddc38-1789191330%20(1).mp4>)
+- [Video download](<media/video-a9d4f339-9697-4925-88a0-8906b99ddc38-1789191330%20(1).mp4>)
+
+### Full media archive
+
+All supplied media remains available in [`media/`](media/):
+
+- [4eed2155](media/4eed2155c1547ad24cd5c1be687bfe8e.jpeg)
+- [633fa1b9](media/633fa1b9-accb-4da8-b992-ef83d4aa2d01.jpg)
+- [7e93f895](media/7e93f895-9fce-4e6a-8fa2-b32d5c585e2f.jpg)
+- [IMG_9983](media/IMG_9983.PNG)
+- [IMG_9984](media/IMG_9984.PNG)
+- [IMG_9985](media/IMG_9985.PNG)
+- [Screenshot 2026-09-08](<media/Screen Shot 2026-09-08 at 16.22.00.png>)
+- [Screenshot 2026-09-21 07.31](<media/Screen Shot 2026-09-21 at 07.31.25.png>)
+- [Screenshot 2026-09-21 07.35](<media/Screen Shot 2026-09-21 at 07.35.48.png>)
 
 ## Supported integrations
 
